@@ -10,7 +10,6 @@ import TutorCart from '../components/TutorCart';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import Navbar from "../components/Navbar"
 
 export default function HomePage() {
   
@@ -60,7 +59,7 @@ export default function HomePage() {
   return (
     <div className="">
    
-        <Navbar />
+       
         <div className=' mx-auto px-4 py-8'>
 
       
@@ -110,7 +109,7 @@ export default function HomePage() {
             </Link>
           </div>
           {blogsError ? (
-            <div className="bg-red-100 text-red-700 p-4 rounded-lg text-center">خطا در دریافت مقالات</div>
+            <div className="bg-red-100 text-red-700 p-4 rounded-lg text-center">error to receive blogs</div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {latestBlogs.map(post => <BlogCart key={post.id} post={post} />)}

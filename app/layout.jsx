@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import { Toaster } from "react-hot-toast";
-
+import Navbar from "../components/Navbar";
 
 
 import QueryProvider from "../Providers/QueryProvider";
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         
          
             <QueryProvider>
-
+            <Navbar />  
               {children}
              
 

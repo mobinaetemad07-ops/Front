@@ -19,7 +19,7 @@ export default function StudentDashboard() {
   });
 
   if (authLoad || dashLoad) return <LoadingSpinner />;
-  if (!isLoggedIn) return <div className="text-center p-8">please login</div>;
+  if (!isLoggedIn) return <div className="text-center p-8 text-red-500 text-xl font-bold">please login!</div>;
   if (error) {
     return <div className="text-center text-red-600 p-8">error: {error.message}</div>;
   }
